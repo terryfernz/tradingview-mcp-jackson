@@ -1,0 +1,45 @@
+{
+  "watchlist": ["IREN", "PL", "PLTR", "URA", "ORCL", "NFLX", "DDN"],
+  "default_timeframe": "240",
+  "settings": "Use LuxAlgo's Ribbon and RSI indicators to determine bias. Look for confluence between the two indicators to confirm bias. Use the 20 EMA on the 4H as a key level for price action. Look for price to be above the 20 EMA for bullish bias and below for bearish bias. Use RSI to gauge momentum and potential overbought/oversold conditions.",
+  "UI/UX": "Use the Apple style website and the UI skill to generate a clean UI, display HyperWave, Money Flow, Price Action and other indicators clearly to allow me to make a quick and calculated choice",
+  "Options": "Show me the best options trades for the watchlist stocks based on the bias and technical indicators. For bullish bias, show me the best Cash Secured Put trades. For bearish bias, show me the best Covered Call trades. Include key details such as strike price, premium, expiration date, and R:R ratio.",
+  "Save": "Save the html file to ~/Library/Mobile Documents/com~apple~CloudDocs/trading sheets/ as morning_brief_YYYYMMDD.html",
+
+  "bias_criteria": {
+    "bullish": [
+      "Analyse selling Cash Secured Puts on the watchlist stocks to generate income and potentially acquire shares at a discount. Look for stocks with strong bullish signals on LuxAlgo's Ribbon and RSI indicators, as well as positive news or catalysts that could drive the stock price higher.",
+      "Ribbon direction is up (bullish colour)",
+      "Price is above the 20 EMA on the 4H",
+      "RSI is below 60 (room to run)",
+      "Positive news or catalysts for the stock",
+      "LuxAlgo's Ribbon is showing strong bullish signals (e.g. wide gap between EMAs, strong green colour)",
+      "LuxAlgo's Price Action is showing bullish patterns (e.g. higher highs/lows, bullish engulfing candles)",
+      "LuxAlgo's Volume is showing increasing volume on up moves and decreasing volume on down moves",
+      "LuxAlgos Ranging is showing strong bullish signals (e.g. price is in the upper range, strong green colour)",
+      "LuxAlgo OHLCV is showing bullish signals (e.g. price is above the open, strong green colour)"
+    ],
+    "bearish": [
+      "Analyse selling Covered Calls on the watchlist stocks to generate income and potentially acquire shares at a discount. Look for stocks with strong bullish signals on LuxAlgo's Ribbon and RSI indicators, as well as positive news or catalysts that could drive the stock price higher.",
+      "Ribbon direction is down (bearish colour)",
+      "Price is below the 20 EMA on the 4H",
+      "RSI is above 40 (room to drop)",
+      "Negative news or catalysts for the stock",
+      "LuxAlgo's Ribbon is showing strong bearish signals (e.g. wide gap between EMAs, strong red colour)"
+    ],
+    "neutral": [
+      "Ribbon is flat or mixed",
+      "Price is chopping around the 20 EMA",
+      "RSI is between 45 and 55"
+    ]
+  },
+
+  "risk_rules": [
+    "Only take trades where R:R is at least 1:2",
+    "No trading in the first 15 minutes of the NY session open",
+    "Maximum 2 open positions at once",
+    "If I have 2 losing trades in a row, stop for the day"
+  ],
+
+  "notes": "Add any other context you want Claude to factor in — e.g. macro events this week, key dates, anything that should affect your bias."
+}
